@@ -1,0 +1,1 @@
+export const GTAG_ID="G-B1211RB418"
