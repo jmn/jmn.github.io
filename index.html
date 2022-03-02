@@ -1,16 +1,20 @@
-<!DOCTYPE html><html data-theme="cmyk" lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Oldweb2 blog</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="/build/_assets/app-WZH246AH.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&amp;amp;lang=en"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/></head><body><div class="remix-root remix-app container mx-auto"><div class="main prose lg:prose-2xl max-w-none"><h1 class="lg:my-20 my-10 animate__animated animate__backInDown py-10 lg:py-40 lg:text-8xl text-center drop-shadow-2xl text-white decoration-black decoration-double bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl">Oldweb2 Blog</h1><div class="content mx-auto"><h2 class="mx-10 lg:text-2xl">Posts</h2><ul class="list-disc mx-6"><li><a class="font-bold" href="/common-issues-in-remix-run">Common issues in Remix.Run</a><div class="italic">A collection of solutions to small issues when working with Remix.run.</div></li><li><a class="font-bold" href="/remix-static-site">Create a static site with Remix and wget and deploy it to GitHub pages</a><div class="italic">How to use Remix.run to create a static site and host it on GitHub Pages.</div></li><li><a class="font-bold" href="/remix-mdx-blog">MDX blog in Remix.run</a><div class="italic">A minimal MDX powered blog with Remix.</div></li></ul></div></div></div><script>
-          let STORAGE_KEY = "positions";
-          if (!window.history.state || !window.history.state.key) {
-            window.history.replaceState({ key: Math.random().toString(32).slice(2) }, null);
-          }
-          try {
-            let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? '{}')
-            let storedY = positions[window.history.state.key];
-            if (typeof storedY === 'number') {
-              window.scrollTo(0, storedY)
-            }
-          } catch(error) {
-            console.error(error)
-            sessionStorage.removeItem(STORAGE_KEY)
-          }
-        </script></body></html>
+<!DOCTYPE html><html data-theme="cmyk" lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Oldweb2 blog</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="/build/_assets/app-JZTLFQD7.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&amp;amp;lang=en"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/></head><body><div class="remix-root remix-app container mx-auto"><div class="main prose lg:prose-2xl max-w-none lg:mx-40"><h1 class="lg:my-20 my-10 animate__animated animate__backInDown py-10 lg:py-40 lg:text-8xl text-center drop-shadow-2xl text-white decoration-black decoration-double bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl">Oldweb2 Blog</h1><div class="content mx-auto"><h2 class="mx-10 lg:text-2xl">Posts</h2><ul class="list-disc mx-6"><li><a class="font-bold" href="/common-issues-in-remix-run">Common issues in Remix.Run</a><div class="italic">A collection of solutions to small issues when working with Remix.run.</div></li><li><a class="font-bold" href="/remix-static-site">Create a static site with Remix and wget and deploy it to GitHub pages</a><div class="italic">How to use Remix.run to create a static site and host it on GitHub Pages.</div></li><li><a class="font-bold" href="/remix-mdx-blog">MDX blog in Remix.run</a><div class="italic">A minimal MDX powered blog with Remix.</div></li></ul></div></div></div><script>(STORAGE_KEY => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key
+      }, "");
+    }
+
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+      let storedY = positions[window.history.state.key];
+
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(STORAGE_KEY);
+    }
+  })("positions")</script></body></html>
